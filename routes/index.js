@@ -1,12 +1,12 @@
 import express from "express";
-// TODO: import router from users.route
+import employeeRouter from "./employees.route";
 
 const router = express.Router();
+
+router.use("/employees", employeeRouter);
 
 router.get("/test", (req, res) => {
   res.send("working");
 });
-
-// TODO: use the imported router to handle all routes matching "/users"
 
 export default router;
